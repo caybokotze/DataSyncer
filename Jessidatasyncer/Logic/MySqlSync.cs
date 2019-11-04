@@ -10,52 +10,68 @@ namespace Jessidatasyncer.Logic
         {
             _connectionString = connectionString;
         }
-
-        private string _connectionString;
-        
-        public void Insert(DataTable outgoingMySql, string table)
+        //
+        public MySqlSync(string connectionString, string table)
         {
-            using (MySqlConnection con = new MySqlConnection(ConnectionStrings[sDatabase].ConnectionString))
+            _connectionString = connectionString;
+            _table = table;
+        }
+        //
+        public MySqlSync(string connectionString, string table, DataTable outgoing)
+        {
+            _connectionString = connectionString;
+            _table = table;
+            _outgoing = outgoing;
+        }
+        //
+        private string _connectionString;
+        private string _table;
+
+        private DataTable _outgoing;
+        //
+        public void BulkInsert(DataTable outgoingMySql, string table)
+        {
+            using (MySqlConnection con = new MySqlConnection(_connectionString))
             {
                 con.Open();
                 using (MySqlDataAdapter da = new MySqlDataAdapter($"select * from "+ table + " limit 1", con))
                 {
                     MySqlCommandBuilder builder = new MySqlCommandBuilder(da);
                     da.InsertCommand = builder.GetInsertCommand();
-                    da.Update(dtRemoteData);
+                    da.Update(_outgoing);
                 }
                 con.Close();
             }
         }
-
-        public void InsertAll(DataTable list)
-        {
-            
-        }
-
         public void Update()
         {
             throw new System.NotImplementedException();
         }
-
         public void Create()
         {
             throw new System.NotImplementedException();
         }
-
         public void Delete()
         {
             throw new System.NotImplementedException();
         }
-
         public DataTable Get(string command)
         {
             throw new System.NotImplementedException();
         }
-
-        public DataTable GetAll()
+        public DataTable GetAll(string sqlStatement)
         {
-            throw new System.NotImplementedException();
+            DataTable result = new DataTable();
+            using (MySqlConnection con = new MySqlConnection(_connectionString))
+            {
+                con.Open();
+                using (MySqlDataAdapter da = new MySqlDataAdapter(sqlStatement, con))
+                {
+                    da.Fill(result);
+                }
+                con.Close();
+            }
+            return result;
         }
         
     }

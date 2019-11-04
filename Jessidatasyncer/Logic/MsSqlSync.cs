@@ -13,17 +13,20 @@ namespace Jessidatasyncer.Logic
     public class MsSqlSync : ISync
     {
         
-        
-        public MsSqlSync(string connection)
+        public MsSqlSync(string connectionString, string table, DataTable outgoing)
         {
-            ConnectionString = connection;
+            _connectionString = connectionString;
+            _table = table;
+            _outgoing = outgoing;
         }
 
-        string ConnectionString { get;}
-        
-        public void Insert()
+        private string _connectionString;
+        private string _table;
+        private DataTable _outgoing;
+
+        public void BulkInsert(DataTable outgoingMySql, string table)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
         public void Update()
@@ -46,27 +49,25 @@ namespace Jessidatasyncer.Logic
             throw new NotImplementedException();
         }
 
-        public DataTable GetAll()
+        public DataTable GetAll(string sqlStatement)
         {
             throw new NotImplementedException();
         }
 
-        public DataTable Fetch(string command)
+        public DataTable GetDataSetMssql(string sqlStatement, string sDatabase)
         {
             DataTable result = new DataTable();
-            using (SqlConnection connection = new SqlConnection(ConnectionString))
+            using (SqlConnection con = new SqlConnection(_connectionString))
             {
-                connection.OpenAsync();
-                using (SqlDataAdapter adapter = new SqlDataAdapter(command, connection))
+                con.Open();
+                using (SqlDataAdapter da = new SqlDataAdapter(sqlStatement, con))
                 {
-                    adapter.Fill(result);
+                    da.Fill(result);
                 }
-                connection.CloseAsync();
+                con.Close();
             }
             return result;
         }
-        
-        
     }
 
     public class KVMapObject
