@@ -1,0 +1,44 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\kotze\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\kotze\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Jessidatasyncer.1327811713.00" t="ExcludeRecursive" />
+    <e p="C:\Users\kotze\OneDrive\Development\Personal\Jessidatasyncer" t="IncludeFlat">
+      <e p="Jessidatasyncer" t="IncludeRecursive">
+        <e p="appsettings.json" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Domain" t="Include">
+          <e p="MsSqlPrimaryCache.cs" t="Include" />
+          <e p="MySqlPrimaryCache.cs" t="Include" />
+          <e p="Record.cs" t="Include" />
+        </e>
+        <e p="Interfaces" t="Include">
+          <e p="ISync.cs" t="Include" />
+        </e>
+        <e p="Jessidatasyncer.csproj" t="IncludeRecursive" />
+        <e p="Logic" t="Include">
+          <e p="DataSync.cs" t="Include" />
+          <e p="MssqlSync.cs" t="Include" />
+          <e p="MySqlSync.cs" t="Include" />
+        </e>
+        <e p="Mappings" t="Include">
+          <e p="RoagMsSqlToMySql.cs" t="Include" />
+        </e>
+        <e p="obj" t="ExcludeRecursive">
+          <e p="Debug" t="Include">
+            <e p="netcoreapp3.0" t="Include">
+              <e p="Jessidatasyncer.AssemblyInfo.cs" t="Include" />
+            </e>
+          </e>
+        </e>
+        <e p="Persistence" t="Include">
+          <e p="AppDbContext.cs" t="Include" />
+        </e>
+        <e p="Program.cs" t="Include" />
+        <e p="Sync" t="Include" />
+      </e>
+      <e p="Jessidatasyncer.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
