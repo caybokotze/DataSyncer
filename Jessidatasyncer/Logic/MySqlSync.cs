@@ -1,5 +1,6 @@
 ﻿using System.Data;
 using Jessidatasyncer.Interfaces;
+using MySql.Data.MySqlClient;
 
 namespace Jessidatasyncer.Logic
 {
@@ -11,9 +12,20 @@ namespace Jessidatasyncer.Logic
         }
 
         private string _connectionString;
-        public void Insert()
+        
+        public void Insert(DataTable outgoingMySql, string table)
         {
-            throw new System.NotImplementedException();
+            using (MySqlConnection con = new MySqlConnection(ConnectionStrings[sDatabase].ConnectionString))
+            {
+                con.Open();
+                using (MySqlDataAdapter da = new MySqlDataAdapter($"select * from "+ table + " limit 1", con))
+                {
+                    MySqlCommandBuilder builder = new MySqlCommandBuilder(da);
+                    da.InsertCommand = builder.GetInsertCommand();
+                    da.Update(dtRemoteData);
+                }
+                con.Close();
+            }
         }
 
         public void InsertAll(DataTable list)

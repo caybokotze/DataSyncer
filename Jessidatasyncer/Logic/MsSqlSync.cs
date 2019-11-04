@@ -41,6 +41,16 @@ namespace Jessidatasyncer.Logic
             throw new System.NotImplementedException();
         }
 
+        public DataTable Get(string command)
+        {
+            throw new NotImplementedException();
+        }
+
+        public DataTable GetAll()
+        {
+            throw new NotImplementedException();
+        }
+
         public DataTable Fetch(string command)
         {
             DataTable result = new DataTable();
