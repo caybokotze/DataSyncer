@@ -1,4 +1,4 @@
-﻿<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\kotze\.Rider2019.2\system\extResources" t="IncludeRecursive" />
@@ -17,11 +17,13 @@
         </e>
         <e p="Jessidatasyncer.csproj" t="IncludeRecursive" />
         <e p="Logic" t="Include">
+          <e p="Common.cs" t="Include" />
           <e p="DataSync.cs" t="Include" />
           <e p="MssqlSync.cs" t="Include" />
           <e p="MySqlSync.cs" t="Include" />
         </e>
         <e p="Mappings" t="Include">
+          <e p="Controller.cs" t="Include" />
           <e p="Roag_MapUserTableColumns.cs" t="Include" />
           <e p="RoagMsSqlToMySql.cs" t="Include" />
           <e p="RoagRiderDetailsToUsers.cs" t="Include" />

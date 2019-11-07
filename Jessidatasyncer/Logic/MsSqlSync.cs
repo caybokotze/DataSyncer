@@ -13,16 +13,16 @@ namespace Jessidatasyncer.Logic
     public class MsSqlSync : ISync
     {
         
-        public MsSqlSync(string connectionString, string table, DataTable outgoing)
+        public MsSqlSync(string connectionString, string table)
         {
             _connectionString = connectionString;
             _table = table;
-            _outgoing = outgoing;
+            
         }
 
         private string _connectionString;
         private string _table;
-        private DataTable _outgoing;
+        
 
         public void BulkInsert(DataTable outgoingMySql, string table)
         {
@@ -51,7 +51,17 @@ namespace Jessidatasyncer.Logic
 
         public DataTable GetAll(string sqlStatement)
         {
-            throw new NotImplementedException();
+            DataTable result = new DataTable();
+            using (SqlConnection con = new SqlConnection(_connectionString))
+            {
+                con.Open();
+                using (SqlDataAdapter db = new SqlDataAdapter(sqlStatement, con))
+                {
+                    db.Fill(result);
+                }
+                con.Close();
+            }
+            return result;
         }
 
         public DataTable GetDataSetMssql(string sqlStatement, string sDatabase)

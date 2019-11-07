@@ -6,7 +6,7 @@ namespace Jessidatasyncer.Mappings
 {
     public class RoagMsSqlToMySql
     {
-        public DataTable GetMySqlMappings(DataTable msSqlRecords)
+        public static DataTable GetMySqlMappings(DataTable msSqlRecords)
         {
             DataTable mySqlRecords = new DataTable();
             
@@ -27,8 +27,5 @@ namespace Jessidatasyncer.Mappings
 
             return mySqlRecords;
         }
-        
-        
-        
     }
 }
