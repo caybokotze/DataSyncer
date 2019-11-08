@@ -11,17 +11,12 @@ namespace Jessidatasyncer.Logic
             _connectionString = connectionString;
         }
         //
+        
+        //
         public MySqlSync(string connectionString, string table)
         {
             _connectionString = connectionString;
             _table = table;
-        }
-        //
-        public MySqlSync(string connectionString, string table, DataTable outgoing)
-        {
-            _connectionString = connectionString;
-            _table = table;
-            _outgoing = outgoing;
         }
         //
         private string _connectionString;
@@ -29,12 +24,12 @@ namespace Jessidatasyncer.Logic
 
         private DataTable _outgoing;
         //
-        public void BulkInsert(DataTable outgoingMySql, string table)
+        public void BulkInsert(DataTable outgoingMySql)
         {
             using (MySqlConnection con = new MySqlConnection(_connectionString))
             {
                 con.Open();
-                using (MySqlDataAdapter da = new MySqlDataAdapter($"select * from "+ table + " limit 1", con))
+                using (MySqlDataAdapter da = new MySqlDataAdapter($"select * from "+ _table + " limit 1", con))
                 {
                     MySqlCommandBuilder builder = new MySqlCommandBuilder(da);
                     da.InsertCommand = builder.GetInsertCommand();
@@ -43,9 +38,17 @@ namespace Jessidatasyncer.Logic
                 con.Close();
             }
         }
+
         public void Update()
         {
             throw new System.NotImplementedException();
+        }
+        public void BulkUpdate(DataTable outgoingMySql)
+        {
+            using (MySqlConnection da = new MySqlConnection(_connectionString))
+            {
+                
+            }
         }
         public void Create()
         {

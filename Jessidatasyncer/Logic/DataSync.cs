@@ -34,8 +34,11 @@ namespace Jessidatasyncer.Logic
                              "INNER JOIN Users ON Users.RiderID = RiderDetails.RiderID " +
                              "WHERE " +
                              "LastUpdated > '" + lastRecord.DateTime + "'");
-
-            RoagMsSqlToMySql.GetMySqlMappings(riderDetailList);
+            //
+            DataTable mySqlMappings = RoagMsSqlToMySql.GetMySqlMappings(riderDetailList);
+            MySqlSync mySql = new MySqlSync(_connectionStrings["Outgoing"].ConnectionString, "Users");
+            
+            mySql.BulkInsert(mySqlMappings);
         }
 
 

@@ -24,7 +24,7 @@ namespace Jessidatasyncer.Logic
         private string _table;
         
 
-        public void BulkInsert(DataTable outgoingMySql, string table)
+        public void BulkInsert(DataTable outgoingMySql)
         {
             throw new NotImplementedException();
         }

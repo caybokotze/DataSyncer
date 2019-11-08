@@ -4,7 +4,7 @@
     {
         public static void Mapper()
         {
-            Roag_MapUserTableColumns.CreateMySqlColumns();
+            //Roag_MapUserTableColumns.CreateMySqlColumns();
         }
         
     }
