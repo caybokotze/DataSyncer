@@ -29,25 +29,18 @@ namespace Jessidatasyncer.Logic
             throw new NotImplementedException();
         }
 
-        public void Update()
+        public void BulkUpdate(DataTable outgoingMySql)
         {
-            throw new System.NotImplementedException();
+            throw new NotImplementedException();
         }
 
-        public void Create()
-        {
-            throw new System.NotImplementedException();
-        }
 
         public void Delete()
         {
             throw new System.NotImplementedException();
         }
 
-        public DataTable Get(string command)
-        {
-            throw new NotImplementedException();
-        }
+        
 
         public DataTable GetAll(string sqlStatement)
         {
@@ -58,21 +51,6 @@ namespace Jessidatasyncer.Logic
                 using (SqlDataAdapter db = new SqlDataAdapter(sqlStatement, con))
                 {
                     db.Fill(result);
-                }
-                con.Close();
-            }
-            return result;
-        }
-
-        public DataTable GetDataSetMssql(string sqlStatement, string sDatabase)
-        {
-            DataTable result = new DataTable();
-            using (SqlConnection con = new SqlConnection(_connectionString))
-            {
-                con.Open();
-                using (SqlDataAdapter da = new SqlDataAdapter(sqlStatement, con))
-                {
-                    da.Fill(result);
                 }
                 con.Close();
             }

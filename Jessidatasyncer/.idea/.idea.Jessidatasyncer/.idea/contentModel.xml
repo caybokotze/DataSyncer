@@ -23,6 +23,8 @@
           <e p="MySqlSync.cs" t="Include" />
         </e>
         <e p="Mappings" t="Include">
+          <e p="CacheMsSqlData.cs" t="Include" />
+          <e p="CacheMySqlData.cs" t="Include" />
           <e p="Controller.cs" t="Include" />
           <e p="Roag_MapUserTableColumns.cs" t="Include" />
           <e p="RoagMsSqlToMySql.cs" t="Include" />

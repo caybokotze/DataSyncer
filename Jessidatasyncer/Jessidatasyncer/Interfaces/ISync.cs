@@ -5,10 +5,8 @@ namespace Jessidatasyncer.Interfaces
     public interface ISync
     {
         void BulkInsert(DataTable outgoingMySql);
-        void Update();
-        void Create();
+        void BulkUpdate(DataTable outgoingMySql);
         void Delete();
-        DataTable Get(string command);
         DataTable GetAll(string sqlStatement);
     }
 }

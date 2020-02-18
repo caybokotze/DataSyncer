@@ -38,27 +38,22 @@ namespace Jessidatasyncer.Logic
                 con.Close();
             }
         }
-
-        public void Update()
-        {
-            throw new System.NotImplementedException();
-        }
+        
         public void BulkUpdate(DataTable outgoingMySql)
         {
-            using (MySqlConnection da = new MySqlConnection(_connectionString))
+            using (MySqlConnection con = new MySqlConnection(_connectionString))
             {
-                
+                using (MySqlDataAdapter da = new MySqlDataAdapter($"select * from " + _table + " limit 1", con))
+                {
+                    MySqlCommandBuilder builder = new MySqlCommandBuilder(da);
+                    da.UpdateCommand = builder.GetUpdateCommand();
+                    da.Update(_outgoing);
+                }
+                con.Close();
             }
         }
-        public void Create()
-        {
-            throw new System.NotImplementedException();
-        }
+        
         public void Delete()
-        {
-            throw new System.NotImplementedException();
-        }
-        public DataTable Get(string command)
         {
             throw new System.NotImplementedException();
         }

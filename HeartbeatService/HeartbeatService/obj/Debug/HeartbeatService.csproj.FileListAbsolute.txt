@@ -1,0 +1,18 @@
+C:\Users\kotze\source\repos\HeartbeatService\HeartbeatService\bin\Debug\HeartbeatService.exe.config
+C:\Users\kotze\source\repos\HeartbeatService\HeartbeatService\bin\Debug\HeartbeatService.exe
+C:\Users\kotze\source\repos\HeartbeatService\HeartbeatService\bin\Debug\HeartbeatService.pdb
+C:\Users\kotze\source\repos\HeartbeatService\HeartbeatService\bin\Debug\Topshelf.dll
+C:\Users\kotze\source\repos\HeartbeatService\HeartbeatService\bin\Debug\Topshelf.xml
+C:\Users\kotze\source\repos\HeartbeatService\HeartbeatService\obj\Debug\HeartbeatService.csprojAssemblyReference.cache
+C:\Users\kotze\source\repos\HeartbeatService\HeartbeatService\obj\Debug\HeartbeatService.csproj.CopyComplete
+C:\Users\kotze\source\repos\HeartbeatService\HeartbeatService\obj\Debug\HeartbeatService.exe
+C:\Users\kotze\source\repos\HeartbeatService\HeartbeatService\obj\Debug\HeartbeatService.pdb
+C:\Users\kotze\OneDrive\Development\Visual Studio\2019\HeartbeatService\HeartbeatService\bin\Debug\HeartbeatService.exe.config
+C:\Users\kotze\OneDrive\Development\Visual Studio\2019\HeartbeatService\HeartbeatService\bin\Debug\HeartbeatService.exe
+C:\Users\kotze\OneDrive\Development\Visual Studio\2019\HeartbeatService\HeartbeatService\bin\Debug\HeartbeatService.pdb
+C:\Users\kotze\OneDrive\Development\Visual Studio\2019\HeartbeatService\HeartbeatService\bin\Debug\Topshelf.dll
+C:\Users\kotze\OneDrive\Development\Visual Studio\2019\HeartbeatService\HeartbeatService\bin\Debug\Topshelf.xml
+C:\Users\kotze\OneDrive\Development\Visual Studio\2019\HeartbeatService\HeartbeatService\obj\Debug\HeartbeatService.csprojAssemblyReference.cache
+C:\Users\kotze\OneDrive\Development\Visual Studio\2019\HeartbeatService\HeartbeatService\obj\Debug\HeartbeatService.csproj.CopyComplete
+C:\Users\kotze\OneDrive\Development\Visual Studio\2019\HeartbeatService\HeartbeatService\obj\Debug\HeartbeatService.exe
+C:\Users\kotze\OneDrive\Development\Visual Studio\2019\HeartbeatService\HeartbeatService\obj\Debug\HeartbeatService.pdb

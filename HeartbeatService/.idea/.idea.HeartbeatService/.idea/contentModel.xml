@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\Users\kotze\.Rider2019.2\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\kotze\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_HeartbeatService.-1786003895.00" t="ExcludeRecursive" />
+    <e p="C:\Users\kotze\OneDrive\Development\Personal\Jessi Data Syncer\HeartbeatService" t="IncludeFlat">
+      <e p="HeartbeatService" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Heartbeat.cs" t="Include" />
+        <e p="HeartbeatService.csproj" t="IncludeRecursive" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Program.cs" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="AssemblyInfo.cs" t="Include" />
+        </e>
+      </e>
+      <e p="HeartbeatService.sln" t="IncludeFlat" />
+      <e p="packages" t="ExcludeRecursive" />
+    </e>
+  </component>
+</project>
