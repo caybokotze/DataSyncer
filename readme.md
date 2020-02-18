@@ -6,10 +6,10 @@ Data syncer is a data syncing engine developed to sync data betweeen different d
 
 ## Goals for this project: ##
 
-- [] Add support for direct "convention based mapping".
-- [] Add Postgres data class support.
-- [] Add MongoDb data class support.
-- [] Add SqlLite data class support.
+- [ ] Add support for direct "convention based mapping".
+- [ ] Add Postgres data class support.
+- [ ] Add MongoDb data class support.
+- [ ] Add SqlLite data class support.
 
 ## Completed so far. ##
 
