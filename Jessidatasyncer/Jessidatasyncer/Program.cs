@@ -1,4 +1,5 @@
 ﻿using System;
+using Jessidatasyncer.Logic;
 
 namespace Jessidatasyncer
 {
@@ -6,7 +7,8 @@ namespace Jessidatasyncer
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            DataSync sync = new DataSync();
+            sync.Sync();
         }
     }
 }

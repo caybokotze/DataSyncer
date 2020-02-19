@@ -2,8 +2,8 @@
 <project version="4">
   <component name="ContentModelStore">
     <e p="C:\Users\kotze\.Rider2019.2\system\extResources" t="IncludeRecursive" />
-    <e p="C:\Users\kotze\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Jessidatasyncer.1327811713.00" t="ExcludeRecursive" />
-    <e p="C:\Users\kotze\OneDrive\Development\Personal\Jessidatasyncer" t="IncludeFlat">
+    <e p="C:\Users\kotze\.Rider2019.2\system\resharper-host\local\Transient\ReSharperHost\v192\SolutionCaches\_Jessidatasyncer.-939418959.00" t="ExcludeRecursive" />
+    <e p="C:\Users\kotze\OneDrive\Development\Personal\Jessi Data Syncer\Jessidatasyncer" t="IncludeFlat">
       <e p="Jessidatasyncer" t="IncludeRecursive">
         <e p="appsettings.json" t="Include" />
         <e p="bin" t="ExcludeRecursive" />
